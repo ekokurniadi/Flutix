@@ -22,10 +22,16 @@ class MyApp extends StatelessWidget {
         providers: [
           BlocProvider(create: (_) => PageBlocCubit()),
           BlocProvider(create: (_) => UserBlocCubit()),
+          BlocProvider(create: (_) => ThemeBlocCubit()),
         ],
-        child: MaterialApp(
-          debugShowCheckedModeBanner: false,
-          home: Wrapper(),
+        child: BlocBuilder<ThemeBlocCubit, ThemeBlocState>(
+          builder: (context, state) {
+            return MaterialApp(
+              theme: state.themeData,
+              debugShowCheckedModeBanner: false,
+              home: Wrapper(),
+            );
+          },
         ),
       ),
     );

@@ -25,8 +25,13 @@ dependencies:
   cupertino_icons: ^1.0.0
   equatable: ^1.1.1
   firebase_auth: null
-  firebase_core: null
+  firebase_core: ^0.7.0
+  email_validator: null
   google_fonts: ^0.3.10
+  another_flushbar: any
+  flutter_spinkit: ^4.1.2+1
+  intl: ^0.16.1
+  material_design_icons_flutter: ^4.0.5045
   flutter:
     sdk: flutter
   flutter_bloc: ^6.0.1
